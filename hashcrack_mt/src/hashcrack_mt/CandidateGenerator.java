@@ -14,14 +14,13 @@ public class CandidateGenerator {
         return total;
     }
 
-    public static String wordAt(long i) {
-        var sb = new StringBuilder();
-        long n = i + 1;                                  
-        while (n > 0) {
-            n--;                                     
+    public static String wordAt(long i,int length) {
+        var sb = new StringBuilder(length);
+        long n = i;                              
+        for (int k = 0; k < length; k++) {  
             sb.append(ALPHABET.charAt((int) (n % BASE)));
             n /= BASE;
         }
-        return sb.reverse().toString();              
+        return sb.reverse().toString();             
     }
 }
