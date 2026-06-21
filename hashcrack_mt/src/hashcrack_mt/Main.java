@@ -4,9 +4,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class Main {
 
-	public static void main(String[] args) throws NoSuchAlgorithmException {
+	public static void main(String[] args) throws NoSuchAlgorithmException, InterruptedException {
 		// TODO Auto-generated method stub
-		String res = Hashcrack.MonoStyle("69c459dd76c6198f72f0c20ddd3c9447", 5);
+		String res = Hashcrack.MultiThreadStyle("de9b9ed78d7e2e1dceeffee780e2f919", 10,"MD5");
 		IO.print(res);
 		
 
